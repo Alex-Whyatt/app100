@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
   before_action :is_admin?, only: [:edit, :update, :destroy]
-
+  require "mini_magick"
   # GET /albums
   # GET /albums.json
   def index
